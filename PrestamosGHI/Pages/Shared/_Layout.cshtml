@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Prestamos GHI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link href="~/css/All.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="contenedor-menu">
+            <h3>MENU <i class="fa fa-bars"></i></h3>
+            <ul>
+                <li><a asp-page="/Index"><i class="iconos fa fa-home"></i> Inicio</a></li>
+                <li><a asp-page="/Solicitudes"><i class="iconos fa fa-file"></i> Solicitudes</a></li>
+                <li><a asp-page="/Clientes"><i class="iconos fa fa-user-friends"></i> Clientes</a></li>
+                <li><a asp-page="/PrestamosAprobados"><i class="iconos fa fas fa-check"></i> Aprobados</a></li>
+                <li><a asp-page="PrestamosDenegados"><i class="iconos fa fa fa-window-close"></i> Declinados</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - PrestamosGHI - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="~/js/all.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
